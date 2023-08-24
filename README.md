@@ -1,2 +1,2 @@
-# real-estate-demo
-Web app demo. Generates real esate descriptions based on minimal input.
+# NLU Uterrance Generator
+Takes in question and intents, and outputs example utterances for each intent to use for NLU training.
