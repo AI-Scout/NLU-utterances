@@ -21,7 +21,7 @@ def utterance_gen(question, intents, example):
                     The (comma-separated) intents are: {intents}
 
 
-                    Generate 50 variations in which a user may respond for each intent. Keep in mind this is a chatbot, so users may not write in full sentences or use correct spelling/grammar at all times. For example, a user may say, "{example}"'''
+                    Generate 50 variations in which a user may respond for each intent. once again, that's 50 variations per intent. Keep in mind this is a chatbot, so users may not write in full sentences or use correct spelling/grammar at all times. For example, a user may say, "{example}"'''
         prompt_query = template.format(
             question=question,
             intents=intents,
