@@ -10,7 +10,7 @@ st.sidebar.subheader('About')
 st.sidebar.caption('Created by Tony at AI Scout Solutions.')
 
 def utterance_gen(location, property_type, bedrooms, bathrooms, special_features, price):
-    with st.spinner("Generating real estate description..."):
+    with st.spinner("Generating utterances..."):
         # Instantiate LLM model
         llm = OpenAI(model_name="gpt-3.5-turbo", openai_api_key=openai_api_key)
         # Prompt
