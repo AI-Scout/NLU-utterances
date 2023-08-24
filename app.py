@@ -14,14 +14,14 @@ def utterance_gen(question, intents, example):
         # Instantiate LLM model
         llm = OpenAI(model_name="gpt-3.5-turbo", openai_api_key=openai_api_key)
         # Prompt
-        template = """I have several intents setup for this question:
+        template = '''I have several intents setup for this question:
 
                     {question}
 
                     The intents are: {intents}
 
 
-                    Generate 50 variations in which a user may respond for each intent. Keep in mind this is a chatbot, so users may not write in full sentences or use correct spelling/grammar at all times. For example, a user may say, "{example}""""
+                    Generate 50 variations in which a user may respond for each intent. Keep in mind this is a chatbot, so users may not write in full sentences or use correct spelling/grammar at all times. For example, a user may say, "{example}"'''
         prompt_query = template.format(
             question=question,
             intents=intents,
