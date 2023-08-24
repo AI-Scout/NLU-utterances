@@ -9,7 +9,7 @@ openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
 st.sidebar.subheader('About')
 st.sidebar.caption('Created by Tony at AI Scout Solutions.')
 
-def utterance_gen(location, property_type, bedrooms, bathrooms, special_features, price):
+def utterance_gen(question, intents, example):
     with st.spinner("Generating utterances..."):
         # Instantiate LLM model
         llm = OpenAI(model_name="gpt-3.5-turbo", openai_api_key=openai_api_key)
@@ -40,8 +40,7 @@ with st.form("myform"):
     if not openai_api_key:
         st.info("Please add your OpenAI API key in the sidebar to continue.")
     elif submitted:
-        utterance_gen(location, property_type, bedrooms, bathrooms, special_features, price)
-
+        utterance_gen(question, intents, example)
 
 hide_streamlit_style = """
             <style>
